@@ -4,13 +4,8 @@ def main():
 
     prev = 0
     total = 0
-    for idx in range(len(r1)):
-        if (
-            r1[idx].isspace()
-            and r2[idx].isspace()
-            and r3[idx].isspace()
-            and r4[idx].isspace()
-        ):
+    for idx, val in enumerate(r1):
+        if val.isspace() and val == r2[idx] == r3[idx] == r4[idx]:
             offset = idx - 1
             nums = []
             while prev <= offset:
